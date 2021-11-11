@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,800;1,500&display=swap");
+
+//  mixin media queries for responsiveness
+@mixin respond($breakpoint) {
+    @if $breakpoint==large {
+        @media (min-width: 850px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==medium {
+        @media (max-width: 849px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==small {
+        @media (max-width: 500px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==xtrasmall {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+}
+
+// Global variables
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+}
+
+$blue:#2B2A65;
+$lightBlue:#5B5D88;
+$black: #0a0a0a;
+$iconsblue:#64B5F6;
+$green:#27AE60;
+$arrow:#25B7D3;
+$gray: #e5e5e5;
+$myBorderRadius: 30px;
+$white:#ffffff;
+$orange: #FFA34D;
+$darkgray: #c4c4c4;
+
+
+//main styling rules
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
+.dashboard {
+    height: 100vh;
+    max-height: 100vh;
+    background-color: $gray;
+    padding: 0;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        background-color: $white;
+        width: 100%;
+        padding: 10px;
+        font-weight: 400;
+        box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
+        border-radius: 0px 0px 10px 10px;
+
+        .icons {
+            i {
+                padding: 5px;
+                margin: 5px;
+                cursor: pointer;
+                color: #2196F3;
+                &:nth-child(3){
+                    color: initial;
+                }
+            }
+
+        }
+    }
+
+    .sidebar {
+        background-color: $white;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        color: $gray;
+        top: 5rem;
+        color: #777777;
+        padding: 10px;
+        box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
+        border-radius: 0px 10px 10px 0px;
+
+        i {
+            margin: 2rem 1rem;
+            &:nth-child(1){
+                color: $arrow;
+            }
+        }
+    }
+
+    .top-menu {
+        display: flex;
+        margin-top: 1rem;
+        margin-left: 3rem;
+        flex-wrap: nowrap;
+        width: 90%;
+
+        >* {
+            height: 88px;
+            display: flex;
+            margin: 0 10px;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 4px rgba(119, 119, 119, 0.25);
+            border-radius: 5px;
+            &:nth-child(1){
+                background: $arrow;
+            }
+            &:nth-child(2){
+                background: $green;
+            }
+            &:nth-child(3){
+                background: $orange;
+            }
+            &:nth-child(4){
+                background: $darkgray;
+            }
+            i, .ico{
+                border-radius: 50%;
+                padding: 10px;
+                border: 1px solid $lightBlue;
+                color: inherit;
+            }
+        }.ico{
+                    height: 45px;
+                }
+    }
+}

@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -14,21 +15,28 @@ body {
   height: 100vh;
   max-height: 100vh;
   background-color: #e5e5e5;
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .dashboard header {
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
-  width: 100%;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  position: fixed;
   padding: 10px;
-  font-weight: 400;
+  font-weight: 600;
+  align-items: center;
   box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
   border-radius: 0px 0px 10px 10px;
 }
 .dashboard header .icons i {
   padding: 5px;
   margin: 5px;
+  font-size: 1.5rem;
   cursor: pointer;
   color: #2196F3;
 }
@@ -40,59 +48,132 @@ body {
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #e5e5e5;
-  width: max-content;
-  top: 5rem;
+  top: 6rem;
+  left: 0;
   color: #777777;
   padding: 10px;
-  max-height: 500px;
+  width: 5vw;
   box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
   border-radius: 0px 10px 10px 0px;
 }
 .dashboard .sidebar i {
   margin: 2rem 1rem;
+  cursor: pointer;
   font-size: 2rem;
-  color: red;
   width: max-content;
-  background-color: blue;
 }
 .dashboard .sidebar i:nth-child(1) {
   color: #25B7D3;
 }
-.dashboard .top-menu {
+.dashboard .main {
+  top: 5rem;
+  position: relative;
   display: flex;
-  margin-top: 1rem;
-  margin-left: 3rem;
-  flex-wrap: nowrap;
   width: 90%;
+  float: right;
+  flex-direction: column;
+  align-items: center;
+  right: 10px;
+  padding: 20px;
 }
-.dashboard .top-menu > * {
+.dashboard .main .top-menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.dashboard .main .top-menu > * {
   height: 88px;
+  width: 25%;
   display: flex;
   margin: 0 10px;
+  padding: 20px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 2px 4px rgba(119, 119, 119, 0.25);
   border-radius: 5px;
 }
-.dashboard .top-menu > *:nth-child(1) {
+.dashboard .main .top-menu > *:nth-child(1) {
   background: #25B7D3;
 }
-.dashboard .top-menu > *:nth-child(2) {
+.dashboard .main .top-menu > *:nth-child(2) {
   background: #27AE60;
 }
-.dashboard .top-menu > *:nth-child(3) {
+.dashboard .main .top-menu > *:nth-child(3) {
   background: #FFA34D;
 }
-.dashboard .top-menu > *:nth-child(4) {
+.dashboard .main .top-menu > *:nth-child(4) {
   background: #c4c4c4;
 }
-.dashboard .top-menu > * i, .dashboard .top-menu > * .ico {
+.dashboard .main .top-menu > * i,
+.dashboard .main .top-menu > * .ico {
   border-radius: 50%;
   padding: 10px;
   border: 1px solid #5B5D88;
   color: inherit;
 }
-.dashboard .top-menu .ico {
+.dashboard .main .top-menu .ico {
   height: 45px;
+}
+.dashboard .main .content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.dashboard .main .content > * {
+  margin: 1rem 10px;
+}
+.dashboard .main .content .charts {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.dashboard .main .content .charts .chart {
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+}
+.dashboard .main .content .charts .chart > * {
+  position: absolute;
+  top: 50%;
+}
+.dashboard .main .content .card-container {
+  width: 30%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  font-weight: bold;
+}
+.dashboard .main .content .card-container .card {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: none;
+  border-radius: inherit;
+  border: 1px solid #ffffff;
+  overflow-x: hidden;
+  box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
+}
+.dashboard .main .content .card-container .card .top-right {
+  position: absolute;
+  top: 0;
+  width: 100;
+  right: 0;
+}
+.dashboard .main .content .card-container .card .bottom-left {
+  position: absolute;
+  bottom: 0;
+  width: 100;
+  left: 0;
+}
+.dashboard .main .content .card-container .card .dp {
+  margin: 5rem auto;
+}
+.dashboard .main .content .card-container .card .master {
+  justify-content: right;
+  display: flex;
+  width: 100%;
+  padding: 10px;
 }

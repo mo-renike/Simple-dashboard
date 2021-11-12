@@ -5,6 +5,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     border: none;
 }
 
@@ -23,7 +24,6 @@ $darkgray: #c4c4c4;
 //main styling rules
 body {
     font-family: "Montserrat", sans-serif;
-    // overflow-x: hidden;
     font-size: 18px;
 }
 
@@ -31,15 +31,21 @@ body {
     height: 100vh;
     max-height: 100vh;
     background-color: $gray;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
     header {
         display: flex;
         justify-content: space-between;
         background-color: $white;
-        width: 100%;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        position: fixed;
         padding: 10px;
-        font-weight: 400;
+        font-weight: 600;
+        align-items: center;
         box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
         border-radius: 0px 0px 10px 10px;
 
@@ -47,9 +53,11 @@ body {
             i {
                 padding: 5px;
                 margin: 5px;
+                font-size: 1.5rem;
                 cursor: pointer;
                 color: #2196F3;
-                &:nth-child(3){
+
+                &:nth-child(3) {
                     color: initial;
                 }
             }
@@ -62,63 +70,156 @@ body {
         position: fixed;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         color: $gray;
-        width: max-content;
-        top: 5rem;
+        top: 6rem;
+        left: 0;
         color: #777777;
         padding: 10px;
-        max-height: 500px;
+        width: 5vw;
         box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
         border-radius: 0px 10px 10px 0px;
 
         i {
             margin: 2rem 1rem;
+            cursor: pointer;
             font-size: 2rem;
-            color: red;
             width: max-content;
-            background-color: blue;
-            &:nth-child(1){
+
+            &:nth-child(1) {
                 color: $arrow;
             }
         }
     }
 
-    .top-menu {
+    .main {
+        top: 5rem;
+        position: relative;
         display: flex;
-        margin-top: 1rem;
-        margin-left: 3rem;
-        flex-wrap: nowrap;
         width: 90%;
+        float: right;
+        flex-direction: column;
+        align-items: center;
+        right: 10px;
+        padding: 20px;
 
-        >* {
-            height: 88px;
+
+        .top-menu {
             display: flex;
-            margin: 0 10px;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0px 2px 4px rgba(119, 119, 119, 0.25);
-            border-radius: 5px;
-            &:nth-child(1){
-                background: $arrow;
-            }
-            &:nth-child(2){
-                background: $green;
-            }
-            &:nth-child(3){
-                background: $orange;
-            }
-            &:nth-child(4){
-                background: $darkgray;
-            }
-            i, .ico{
-                border-radius: 50%;
-                padding: 10px;
-                border: 1px solid $lightBlue;
-                color: inherit;
-            }
-        }.ico{
-                    height: 45px;
+            justify-content: space-evenly;
+            width: 100%;
+
+            >* {
+                height: 88px;
+                width: 25%;
+                display: flex;
+                margin: 0 10px;
+                padding: 20px;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0px 2px 4px rgba(119, 119, 119, 0.25);
+                border-radius: 5px;
+
+                &:nth-child(1) {
+                    background: $arrow;
                 }
+
+                &:nth-child(2) {
+                    background: $green;
+                }
+
+                &:nth-child(3) {
+                    background: $orange;
+                }
+
+                &:nth-child(4) {
+                    background: $darkgray;
+                }
+
+                i,
+                .ico {
+                    border-radius: 50%;
+                    padding: 10px;
+                    border: 1px solid $lightBlue;
+                    color: inherit;
+                }
+            }
+
+            .ico {
+                height: 45px;
+            }
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            >* {
+                margin: 1rem 10px;
+            }
+
+            .charts {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+
+                .chart {
+                    background-color: $white;
+                    border-radius: 10px;
+                    position: relative;
+
+                    >* {
+                        position: absolute;
+                        top: 50%;
+                    }
+                }
+            }
+
+            .card-container {
+                width: 30%;
+                background-color: $white;
+                border-radius: 10px;
+                padding: 20px;
+                font-weight: bold;
+
+                .card {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    border: none;
+                    border-radius: inherit;
+                    border: 1px solid $white;
+                    overflow-x: hidden;
+                    box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
+
+                    .top-right {
+                        position: absolute;
+                        top: 0;
+                        width: 100;
+                        right: 0;
+                    }
+
+                    .bottom-left {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100;
+                        left: 0;
+                    }
+
+                    .dp {
+                        margin: 5rem auto;
+                    }
+
+                    .master {
+                        justify-content: right;
+                        display: flex;
+                        width: 100%;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
     }
-  
 }

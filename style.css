@@ -8,7 +8,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
   font-size: 18px;
 }
 
@@ -57,9 +56,13 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #e5e5e5;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   top: 5rem;
   color: #777777;
   padding: 10px;
+  max-height: 500px;
   -webkit-box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
           box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
   border-radius: 0px 10px 10px 0px;
@@ -67,6 +70,12 @@ body {
 
 .dashboard .sidebar i {
   margin: 2rem 1rem;
+  font-size: 2rem;
+  color: red;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: blue;
 }
 
 .dashboard .sidebar i:nth-child(1) {

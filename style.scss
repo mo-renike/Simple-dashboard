@@ -1,31 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,800;1,500&display=swap");
 
-//  mixin media queries for responsiveness
-@mixin respond($breakpoint) {
-    @if $breakpoint==large {
-        @media (min-width: 850px) {
-            @content;
-        }
-    }
-
-    @if $breakpoint==medium {
-        @media (max-width: 849px) {
-            @content;
-        }
-    }
-
-    @if $breakpoint==small {
-        @media (max-width: 500px) {
-            @content;
-        }
-    }
-
-    @if $breakpoint==xtrasmall {
-        @media (max-width: 320px) {
-            @content;
-        }
-    }
-}
 
 // Global variables
 * {
@@ -41,7 +15,6 @@ $iconsblue:#64B5F6;
 $green:#27AE60;
 $arrow:#25B7D3;
 $gray: #e5e5e5;
-$myBorderRadius: 30px;
 $white:#ffffff;
 $orange: #FFA34D;
 $darkgray: #c4c4c4;
@@ -50,7 +23,7 @@ $darkgray: #c4c4c4;
 //main styling rules
 body {
     font-family: "Montserrat", sans-serif;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     font-size: 18px;
 }
 
@@ -90,14 +63,20 @@ body {
         display: flex;
         flex-direction: column;
         color: $gray;
+        width: max-content;
         top: 5rem;
         color: #777777;
         padding: 10px;
+        max-height: 500px;
         box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
         border-radius: 0px 10px 10px 0px;
 
         i {
             margin: 2rem 1rem;
+            font-size: 2rem;
+            color: red;
+            width: max-content;
+            background-color: blue;
             &:nth-child(1){
                 color: $arrow;
             }
@@ -141,4 +120,5 @@ body {
                     height: 45px;
                 }
     }
+  
 }

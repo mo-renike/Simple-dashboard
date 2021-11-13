@@ -7,9 +7,13 @@
   border: none;
 }
 
+h4 {
+  font-size: 1.1rem;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .dashboard {
@@ -29,6 +33,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 2;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -129,7 +134,7 @@ body {
 }
 
 .dashboard .main .top-menu > * {
-  height: 88px;
+  height: 80px;
   width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,13 +195,6 @@ body {
 }
 
 .dashboard .main .content .charts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 70%;
 }
 
@@ -204,11 +202,6 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
   position: relative;
-}
-
-.dashboard .main .content .charts .chart > * {
-  position: absolute;
-  top: 50%;
 }
 
 .dashboard .main .content .card-container {

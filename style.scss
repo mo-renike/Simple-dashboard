@@ -68,19 +68,19 @@ body {
         }
     }
 
-    .sidebar {
+    .side {
         background-color: $white;
         position: fixed;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         color: $gray;
-        top: 6rem;
+        top: 8rem;
         left: 0;
         color: #777777;
-        padding: 10px;
-        width: 5vw;
+        padding: 20px;
+        width: 6vw;
+        bottom: 0;
         box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
         border-radius: 0px 10px 10px 0px;
 
@@ -88,7 +88,7 @@ body {
             margin: 2rem 1rem;
             cursor: pointer;
             font-size: 2rem;
-            width: max-content;
+            // width: max-content;
 
             &:nth-child(1) {
                 color: $arrow;
@@ -100,7 +100,7 @@ body {
         top: 5rem;
         position: relative;
         display: flex;
-        width: 90%;
+        width: 93%;
         float: right;
         flex-direction: column;
         align-items: center;
@@ -117,7 +117,7 @@ body {
                 height: 80px;
                 width: 25%;
                 display: flex;
-                margin: 0 10px;
+                margin: 0px 10px;
                 padding: 20px;
                 justify-content: space-between;
                 align-items: center;
@@ -160,7 +160,8 @@ body {
             justify-content: space-between;
 
             >* {
-                margin: 1rem 10px;
+                margin:  10px;
+                position: relative;
             }
 
             .charts {
@@ -169,7 +170,18 @@ body {
                 .chart {
                     background-color: $white;
                     border-radius: 10px;
-                    position: relative;
+                }
+                .pag{
+                    display: flex;
+                    position: absolute;
+                    right: 0;
+                    >*{
+                        background-color: $white;
+                        font-size: .7rem;
+                        padding: 3px 7px;
+                        font-weight: normal;
+                        border: 1px solid $gray;
+                    }
                 }
             }
 

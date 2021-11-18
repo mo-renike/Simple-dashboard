@@ -64,7 +64,7 @@ body {
   color: initial;
 }
 
-.dashboard .sidebar {
+.dashboard .side {
   background-color: #ffffff;
   position: fixed;
   display: -webkit-box;
@@ -74,33 +74,28 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   color: #e5e5e5;
-  top: 6rem;
+  top: 8rem;
   left: 0;
   color: #777777;
-  padding: 10px;
-  width: 5vw;
+  padding: 20px;
+  width: 6vw;
+  bottom: 0;
   -webkit-box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
           box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
   border-radius: 0px 10px 10px 0px;
 }
 
-.dashboard .sidebar i {
+.dashboard .side i {
   margin: 2rem 1rem;
   cursor: pointer;
   font-size: 2rem;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
-.dashboard .sidebar i:nth-child(1) {
+.dashboard .side i:nth-child(1) {
   color: #25B7D3;
 }
 
@@ -110,7 +105,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  width: 93%;
   float: right;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -139,7 +134,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 10px;
+  margin: 0px 10px;
   padding: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -191,7 +186,8 @@ body {
 }
 
 .dashboard .main .content > * {
-  margin: 1rem 10px;
+  margin: 10px;
+  position: relative;
 }
 
 .dashboard .main .content .charts {
@@ -201,7 +197,22 @@ body {
 .dashboard .main .content .charts .chart {
   background-color: #ffffff;
   border-radius: 10px;
-  position: relative;
+}
+
+.dashboard .main .content .charts .pag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+
+.dashboard .main .content .charts .pag > * {
+  background-color: #ffffff;
+  font-size: .7rem;
+  padding: 3px 7px;
+  font-weight: normal;
+  border: 1px solid #e5e5e5;
 }
 
 .dashboard .main .content .card-container {

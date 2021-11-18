@@ -48,36 +48,35 @@ body {
 .dashboard header .icons i:nth-child(3) {
   color: initial;
 }
-.dashboard .sidebar {
+.dashboard .side {
   background-color: #ffffff;
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: #e5e5e5;
-  top: 6rem;
+  top: 8rem;
   left: 0;
   color: #777777;
-  padding: 10px;
-  width: 5vw;
+  padding: 20px;
+  width: 6vw;
+  bottom: 0;
   box-shadow: 0px 0px 4px rgba(119, 119, 119, 0.25);
   border-radius: 0px 10px 10px 0px;
 }
-.dashboard .sidebar i {
+.dashboard .side i {
   margin: 2rem 1rem;
   cursor: pointer;
   font-size: 2rem;
-  width: max-content;
 }
-.dashboard .sidebar i:nth-child(1) {
+.dashboard .side i:nth-child(1) {
   color: #25B7D3;
 }
 .dashboard .main {
   top: 5rem;
   position: relative;
   display: flex;
-  width: 90%;
+  width: 93%;
   float: right;
   flex-direction: column;
   align-items: center;
@@ -93,7 +92,7 @@ body {
   height: 80px;
   width: 25%;
   display: flex;
-  margin: 0 10px;
+  margin: 0px 10px;
   padding: 20px;
   justify-content: space-between;
   align-items: center;
@@ -128,7 +127,8 @@ body {
   justify-content: space-between;
 }
 .dashboard .main .content > * {
-  margin: 1rem 10px;
+  margin: 10px;
+  position: relative;
 }
 .dashboard .main .content .charts {
   width: 70%;
@@ -136,7 +136,18 @@ body {
 .dashboard .main .content .charts .chart {
   background-color: #ffffff;
   border-radius: 10px;
-  position: relative;
+}
+.dashboard .main .content .charts .pag {
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.dashboard .main .content .charts .pag > * {
+  background-color: #ffffff;
+  font-size: 0.7rem;
+  padding: 3px 7px;
+  font-weight: normal;
+  border: 1px solid #e5e5e5;
 }
 .dashboard .main .content .card-container {
   width: 30%;
